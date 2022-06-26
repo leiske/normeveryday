@@ -1,6 +1,7 @@
 build/scraped_jokes.json
 build/scraped_jokes.key
 build/todays_joke.json
+build/dist
 
 node_modules
 
