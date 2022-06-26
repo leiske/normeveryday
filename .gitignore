@@ -3,3 +3,5 @@ build/scraped_jokes.key
 build/todays_joke.json
 
 node_modules
+
+.env
