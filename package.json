@@ -1,0 +1,19 @@
+{
+  "name": "normeveryday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:new:local": "node build/getrandomjoke.js && node build/buildSite.js && npx serve build/dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.3.0",
+    "mustache": "^4.2.0"
+  }
+}
