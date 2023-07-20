@@ -11,10 +11,11 @@ const chosenJokes = JSON.parse(await fs.readFile(path.join(__dirname, 'chosen_jo
 const onlyNewJokes = scrapedJokes.filter(({ id }) => !chosenJokes.includes(id));
 const todaysJoke = onlyNewJokes[Math.floor(Math.random() * onlyNewJokes.length)];
 
+// write-out new joke for build process
+await fs.writeFile(path.join(__dirname, 'todays_joke.json'), JSON.stringify(todaysJoke));
+
 //update chosenJokes to include the newly picked joke
 const { id: newJokeId } = todaysJoke;
 chosenJokes.push(newJokeId);
 await fs.writeFile(path.join(__dirname, 'chosen_jokes.json'), JSON.stringify(chosenJokes));
 
-// write-out new joke for build process
-await fs.writeFile(path.join(__dirname, 'todays_joke.json'), JSON.stringify(todaysJoke));
