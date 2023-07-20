@@ -1,0 +1,39 @@
+name: Update GitHub Pages
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Get new joke
+        run: npm run get-joke
+
+      - name: Update site
+        run: npm run update-site
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git checkout gh-pages
+          git rm -r .
+          mv dist/* . # Assuming your npm script generates files inside the "dist" folder
+          git add .
+          git commit -m "Display new joke"
+          git push origin gh-pages
+
