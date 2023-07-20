@@ -21,10 +21,7 @@ jobs:
         run: npm install
 
       - name: Get new joke
-        run: npm run get-joke
-
-      - name: Update site
-        run: npm run update-site
+        run: npm run build:gh-pages
 
       - name: Deploy to GitHub Pages
         run: |

@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:new:local": "node build/getrandomjoke.js && node build/buildSite.js && npx serve build/dist"
+    "build:gh-pages": "node build/getrandomjoke.js && node build/buildSite.js" 
   },
   "author": "",
   "license": "ISC",
