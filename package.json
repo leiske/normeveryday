@@ -2,6 +2,7 @@
   "name": "normeveryday",
   "version": "1.0.0",
   "description": "An excuse to build something that hinges on GH Actions to orchestrate the build process.",
+  "type": "module",
   "main": "index.js",
   "dependencies": {
     "dotenv": "^16.0.1",
@@ -36,7 +37,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:gh-pages": "node build/getrandomjoke.js && node build/buildSite.js > dist/index.html" 
   },
   "repository": {
     "type": "git",
