@@ -13,7 +13,7 @@ const todaysJoke = onlyNewJokes[Math.floor(Math.random() * onlyNewJokes.length)]
 
 // write-out new joke for build process
 await fs.writeFile(path.join(__dirname, 'todays_joke.json'), JSON.stringify(todaysJoke));
-
+//
 //update chosenJokes to include the newly picked joke
 const { id: newJokeId } = todaysJoke;
 chosenJokes.push(newJokeId);

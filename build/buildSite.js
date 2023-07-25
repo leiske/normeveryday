@@ -23,6 +23,6 @@ const view = {
 
 const renderedTemplate = Mustache.render(template, view);
 
-await fs.writeFile(path.join(__dirname, 'dist/index.html'), renderedTemplate);
+// await fs.writeFile(path.join(__dirname, 'dist/index.html'), renderedTemplate);
 
 console.log(renderedTemplate)

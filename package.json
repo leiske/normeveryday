@@ -1,21 +1,52 @@
 {
   "name": "normeveryday",
   "version": "1.0.0",
-  "description": "",
+  "description": "An excuse to build something that hinges on GH Actions to orchestrate the build process.",
   "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:new:local": "node build/getrandomjoke.js && node build/buildSite.js && npx serve build/dist"
-    "build:gh-pages": "node build/getrandomjoke.js && node build/buildSite.js" 
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "combined-stream": "^1.0.8",
+    "cross-fetch": "^3.1.5",
+    "graphql": "^16.5.0",
+    "asynckit": "^0.4.0",
+    "graphql-request": "^4.3.0",
+    "graphql-tag": "^2.12.6",
+    "extract-files": "^9.0.0",
+    "delayed-stream": "^1.0.0",
+    "mustache": "^4.2.0",
+    "form-data": "^3.0.1",
+    "mime-types": "^2.1.35",
+    "hoist-non-react-statics": "^3.3.2",
+    "node-fetch": "^2.6.7",
+    "optimism": "^0.16.1",
+    "symbol-observable": "^4.0.0",
+    "mime-db": "^1.52.0",
+    "prop-types": "^15.8.1",
+    "tr46": "^0.0.3",
+    "js-tokens": "^4.0.0",
+    "object-assign": "^4.1.1",
+    "zen-observable-ts": "^1.2.5",
+    "webidl-conversions": "^3.0.1",
+    "ts-invariant": "^0.10.3",
+    "tslib": "^2.4.0",
+    "whatwg-url": "^5.0.0",
+    "loose-envify": "^1.4.0",
+    "react-is": "^16.13.1",
+    "zen-observable": "^0.8.15"
   },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leiske/normeveryday.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@apollo/client": "^3.6.9",
-    "dotenv": "^16.0.1",
-    "graphql": "^16.5.0",
-    "graphql-request": "^4.3.0",
-    "mustache": "^4.2.0"
-  }
+  "bugs": {
+    "url": "https://github.com/leiske/normeveryday/issues"
+  },
+  "homepage": "https://github.com/leiske/normeveryday#readme"
 }
